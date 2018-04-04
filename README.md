@@ -31,7 +31,7 @@ Make sure the local Xchange daemon running is at least version 12.1 (120100)
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/Xchange-platform/sentinel.git & cd sentinel
+    $ git clone https://github.com/cryptforall/sentinel.git & cd sentinel
     $ mkdir database
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
@@ -44,7 +44,7 @@ Set up a crontab entry to call Sentinel every minute:
 
 In the crontab editor, add the lines below, replacing '/home/YOURUSERNAME/sentinel' to the path where you cloned sentinel to:
 
-    * * * * * cd /home/YOURUSERNAME/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
+    * * * * * cd /root/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
 
 ### 4. Test the Configuration
 
@@ -58,7 +58,7 @@ With all tests passing and crontab setup, Sentinel will stay in sync with Xchang
 
 An alternative (non-default) path to the `Xchange.conf` file can be specified in `sentinel.conf`:
 
-    Xchange_conf=/path/to/Xchange.conf
+    Xchange_conf=/root/.Xchangecore/Xchange.conf
 
 ## Troubleshooting
 
