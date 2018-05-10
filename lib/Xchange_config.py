@@ -34,7 +34,7 @@ class XchangeConfig():
         creds = {key: value for (key, value) in match}
 
         # standard Xchange defaults...
-        default_port = 17196 if (network == 'mainnet') else 18196
+        default_port = 9386 if (network == 'mainnet') else 19386
 
         # use default port for network if not specified in Xchange.conf
         if not ('port' in creds):
