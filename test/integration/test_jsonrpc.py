@@ -16,7 +16,7 @@ def test_Xchanged():
     config_text = XchangeConfig.slurp_config_file(config.Xchange_conf)
     network = 'mainnet'
     is_testnet = False
-    genesis_hash = u'00000ecbba09ad38ab68c367923732bf8e6f1e9868127d842ceecd330af9c38f'
+    genesis_hash = u'0x11dff3d3feab81bb973fa356781a7a2f42f8d431a4cb8b3eb3c094d1729135f1'
     for line in config_text.split("\n"):
         if line.startswith('testnet=1'):
             network = 'testnet'
